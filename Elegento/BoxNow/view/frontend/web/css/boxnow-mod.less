@@ -1,0 +1,119 @@
+.boxnow_container {
+    display: none;
+    padding: 5px;
+    font-weight: 600;
+    line-height: 1.1;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    margin-top: 10px;
+
+    .boxnow_details_header {
+        font-weight: 100 !important;
+        border-bottom: 1px solid #cccccc;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @media only screen and (max-width: 1023px) {
+            font-size: 16px;
+        }
+
+        &:after {
+            content: '';
+            width: 8px;
+            height: 15px;
+            border-width: 0 3px 3px 0;
+            display: block;
+            border-color: #308f38;
+            border-style: solid;
+            transform: rotate(45deg);
+            margin-left: 10px;
+        }
+
+
+
+    }
+
+    .boxnow_details_address_text {
+        margin-bottom: 0.8rem;
+        font-weight: bold;
+        line-height: 1;
+        color: #539b35;
+        font-size: 18px;
+    }
+}
+
+//Remove boxnow attribute textarea from showing
+div[name='shippingAddress.custom_attributes.boxnow_id'] {
+    display: none !important;
+}
+
+.boxnow_iframe, .contentContainer {
+    iframe {
+        margin-top: 50px;
+        border: none;
+    }
+}
+
+.cart-container .contentContainer {
+    display: none !important;
+}
+
+.checkout-shipping-method .contentContainer {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.ship-via .shipping-information-content {
+    display: flex;
+    flex-direction: column;
+}
+
+
+//Amasty Styling
+
+#checkout {
+    //Modern
+    &.-modern {
+
+        // 1 / 2  / 3 Columns
+        &.-layout-1column, &.-layout-2columns, &.-layout-3columns {
+            .boxnow_address, .boxnow_iframe {
+                width: 100%;
+
+                td {
+                    display: flex;
+                    width: 100%;
+                }
+            }
+
+            .boxnow_iframe td {
+                border-top-width: 0;
+                padding-top: 0;
+
+            }
+
+            .boxnow_address td {
+                padding-bottom: 0;
+            }
+
+        }
+
+        &.-layout-2columns {
+            .boxnow_container {
+                width: 100%;
+                align-items: center;
+            }
+        }
+    }
+
+    //Classic
+    //2 Columns
+    //3 Columns
+}
+

@@ -1,0 +1,28 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+	<default>
+		<carriers>
+			<boxnow>
+				<model>Elegento\BoxNow\Model\Carrier\BoxNow</model>
+				<active>0</active>
+				<title>BoxNow</title>
+				<name>BoxNow</name>
+				<price>5.00</price>
+				<specificerrmsg>This shipping method is not available. To use this shipping method, please contact us.</specificerrmsg>
+				<sallowspecific>0</sallowspecific>
+                <sort_order>900</sort_order>
+            </boxnow>
+		</carriers>
+        <payment>
+            <boxnow>
+                <active>0</active>
+                <model>Elegento\BoxNow\Model\Payment\BoxNow</model>
+                <order_status>pending</order_status>
+                <allowspecific>0</allowspecific>
+                <title>Box Now CoD</title>
+                <instructions>ВНИМАНИЕ! При поръчка с доставка до автомат на BOX NOW няма опция "Наложен платеж" с плащане в брой. Плащането на наложения платеж трябва да се направи с банкова карта през линк, който ще получите по имейл/смс при изпратена пратка.</instructions>
+                <group>offline</group>
+            </boxnow>
+        </payment>
+	</default>
+</config>

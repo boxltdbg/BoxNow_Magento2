@@ -1,0 +1,72 @@
+.boxnow_container {
+    display:none;
+    padding: 5px;
+    font-weight: 600;
+    line-height: 1.1;
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    /*display: flex;*/
+    flex-direction: column;
+    justify-content: flex-start;
+    text-align: left;
+    margin-top: 10px;
+}
+.boxnow_container h2 {
+    font-weight: 100 !important;
+    border-bottom: 1px solid #cccccc;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1023px) {
+    .boxnow_container h2 {
+        font-size: 16px;
+    }
+}
+
+h2.boxnow_details_header:after  {
+    content: '';
+    width: 8px;
+    height: 15px;
+    border-width: 0 3px 3px 0;
+    display: block;
+    border-color: #308f38;
+    border-style: solid;
+    transform: rotate(45deg);
+}
+
+.boxnow_details_address_text {
+    margin-bottom: 0.8rem;
+    font-weight: bold;
+    line-height: 1;
+    color: #539b35;
+    font-size: 18px;
+}
+
+div[name='shippingAddress.custom_attributes.boxnow_id']{
+    display: none;
+}
+.contentContainer iframe{
+    margin-top: 50px;
+    border: none;
+}
+
+.cart-container .contentContainer{
+    display: none !important;
+}
+
+.checkout-shipping-method .contentContainer{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.ship-via .shipping-information-content {
+    display: flex;
+    flex-direction: column;
+}
+
+

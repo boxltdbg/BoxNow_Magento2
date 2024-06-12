@@ -1,0 +1,23 @@
+{
+    "name": "elegento/module-boxnow",
+    "description": "BoxNow Module",
+    "type": "magento2-module",
+    "version": "2.0.0",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Elegento",
+            "homepage": "https://www.elegento.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Elegento\\BoxNow\\": ""
+        }
+    }
+}

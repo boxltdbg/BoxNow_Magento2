@@ -1,0 +1,35 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<type name="Magento\Quote\Model\BillingAddressManagement">
+		<plugin disabled="false" name="Elegento_Plugin_Magento_Quote_Model_BillingAddressManagement" sortOrder="10" type="Elegento\BoxNow\Plugin\Magento\Quote\Model\BillingAddressManagement"/>
+	</type>
+	<type name="Magento\Quote\Model\ShippingAddressManagement">
+		<plugin disabled="false" name="Elegento_Plugin_Magento_Quote_Model_ShippingAddressManagement" sortOrder="10" type="Elegento\BoxNow\Plugin\Magento\Quote\Model\ShippingAddressManagement"/>
+	</type>
+	<type name="Magento\Checkout\Model\PaymentInformationManagement">
+		<plugin disabled="false" name="Elegento_Plugin_Magento_Checkout_Model_PaymentInformationManagement" sortOrder="10" type="Elegento\BoxNow\Plugin\Magento\Checkout\Model\PaymentInformationManagement"/>
+	</type>
+    <type name="Magento\OfflinePayments\Model\Cashondelivery">
+        <plugin disabled="false" name="cashondeliveryplug"  sortOrder="10" type="Elegento\BoxNow\Plugin\CashondeliveryPlugin"  />
+    </type>
+    <type name="MSP\CashOnDelivery\Model\Payment">
+		<plugin name="mspcashondeliveryplug" type="Elegento\BoxNow\Plugin\MSPCashondeliveryPlugin" disabled="false" sortOrder="10"/>
+	</type>
+    <type name="Magento\Config\Model\Config\TypePool">
+    <arguments>
+        <argument name="sensitive" xsi:type="array">
+            <item name="carriers/boxnow/client_id" xsi:type="string">1</item>
+        </argument>
+        <argument name="sensitive" xsi:type="array">
+            <item name="carriers/boxnow/client_secret" xsi:type="string">1</item>
+        </argument>
+    </arguments>
+    </type>
+    <type name="Magento\Sales\Api\OrderRepositoryInterface">
+        <plugin name="boxnow_id_custom_attribute" type="Elegento\BoxNow\Plugin\Model\Order\AddCustomOrderAttribute" />
+    </type>
+    <type name="Magento\Quote\Model\CouponManagement">
+        <plugin name="Elegento_BoxNow_Plugin_Magento_Quote_Model_CouponManagement" type="Elegento\BoxNow\Plugin\Magento\Quote\Model\CouponManagement" sortOrder="10" disabled="false"/>
+    </type>
+    <preference for="Elegento\BoxNow\Api\GenerateBoxnowVoucherManagementInterface" type="Elegento\BoxNow\Model\GenerateBoxnowVoucherManagement"/>
+</config>

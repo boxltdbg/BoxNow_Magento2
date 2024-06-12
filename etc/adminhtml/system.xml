@@ -1,0 +1,143 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <section id="carriers" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="1000" translate="label">
+            <group id="boxnow" sortOrder="10" showInWebsite="1" showInStore="1" showInDefault="1" translate="label">
+                <label>BoxNow</label>
+                <comment>
+                    <![CDATA[
+				<div style="padding:10px;background-color:#fff;border:1px solid #ddd;margin-bottom:7px;">
+				This module was developed by <a href="https://www.elegento.com" target="_blank">www.elegento.com</a> - Magento Specialists.
+				For documentation refer to <a href="https://docs.google.com/document/d/19xGw9-DNs6xW3AAoI5pl_bMVd1p8EAmWTz5pjr-yPC4/edit?usp=sharing">BoxNow Guide</a>.
+				</div>
+			  ]]>
+                </comment>
+                <field id="active" type="select" sortOrder="11" showInWebsite="1" showInStore="1" showInDefault="1"
+                       translate="label">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="name" type="text" sortOrder="12" showInWebsite="1" showInStore="1" showInDefault="1"
+                       translate="label">
+                    <label>Method Name</label>
+                </field>
+                <field id="price" type="text" sortOrder="13" showInWebsite="1" showInStore="1" showInDefault="1"
+                       translate="label">
+                    <label>Price</label>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                </field>
+                <field id="sort_order" type="text" sortOrder="14" showInWebsite="1" showInStore="1" showInDefault="1"
+                       translate="label">
+                    <label>Sort Order</label>
+                </field>
+                <field id="title" type="text" sortOrder="15" showInWebsite="1" showInStore="1" showInDefault="1"
+                       translate="label">
+                    <label>Title</label>
+                </field>
+                <field id="sallowspecific" type="select" sortOrder="16" showInWebsite="1" showInStore="1"
+                       showInDefault="1" translate="label">
+                    <label>Ship to Applicable Countries</label>
+                    <frontend_class>shipping-applicable-country</frontend_class>
+                    <source_model>Magento\Shipping\Model\Config\Source\Allspecificcountries</source_model>
+                </field>
+                <field id="specificcountry" type="multiselect" sortOrder="17" showInWebsite="1" showInStore="1"
+                       showInDefault="1" translate="label">
+                    <label>Ship to Specific Countries</label>
+                    <can_be_empty>1</can_be_empty>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                </field>
+                <field id="specificerrmsg" type="textarea" sortOrder="18" showInWebsite="1" showInStore="1"
+                       showInDefault="1" translate="label">
+                    <label>Displayed Error Message</label>
+                </field>
+                <group id="customer_details" sortOrder="20" showInWebsite="1" showInStore="1" showInDefault="1"
+                       translate="label">
+                    <label>Customer Details</label>
+                    <field id="contact_name" type="text" sortOrder="21" showInWebsite="1" showInStore="1"
+                           showInDefault="1" translate="label">
+                        <label>Customer Contact Name</label>
+                        <validate>required-entry</validate>
+                    </field>
+                    <field id="contact_number" type="text" sortOrder="21" showInWebsite="1" showInStore="1"
+                           showInDefault="1" translate="label">
+                        <label>Customer Contact Number</label>
+                        <comment>Mobile should be in the following format +30-6912345678</comment>
+                        <validate>no-whitespace required-entry</validate>
+                    </field>
+                    <field id="contact_email" type="text" sortOrder="22" showInWebsite="1" showInStore="1"
+                           showInDefault="1" translate="label">
+                        <label>Customer Email</label>
+                        <validate>required-entry no-whitespace validate-email</validate>
+                    </field>
+                    <field id="locationId" type="text" sortOrder="23" showInWebsite="1" showInStore="1"
+                           showInDefault="1" translate="label">
+                        <label>Warehouse Location ID</label>
+                        <validate>integer</validate>
+                    </field>
+                    <field id="partner_id" type="text" sortOrder="24" showInWebsite="1" showInStore="1"
+                           showInDefault="1" translate="label">
+                        <label>Partner ID</label>
+                        <validate>required-entry</validate>
+                    </field>
+                </group>
+                <group id="api_details" sortOrder="30" showInWebsite="1" showInStore="1" showInDefault="1"
+                       translate="label">
+                    <label>Api Details</label>
+                    <field id="api_url" type="text" sortOrder="31" showInWebsite="1" showInStore="1" showInDefault="1"
+                           translate="label">
+                        <label>API URL</label>
+                    </field>
+                    <field id="client_id" type="text" sortOrder="32" showInWebsite="1" showInStore="1" showInDefault="1"
+                           translate="label">
+                        <label>Client ID</label>
+                    </field>
+                    <field id="client_secret" type="password" sortOrder="33" showInWebsite="1" showInStore="1"
+                           showInDefault="1" translate="label">
+                        <label>Client Secret</label>
+                    </field>
+                </group>
+            </group>
+        </section>
+        <section id="payment" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="1000" translate="label">
+            <group id="boxnow" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label">
+                <label>BoxNow Payment</label>
+                <comment>
+                    <![CDATA[
+				<div style="padding:10px;background-color:#fff;border:1px solid #ddd;margin-bottom:7px;">
+				This module was developed by <a href="https://www.elegento.com" target="_blank">www.elegento.com</a> - Magento Specialists.
+				For documentation refer to <a href="https://docs.google.com/document/d/19xGw9-DNs6xW3AAoI5pl_bMVd1p8EAmWTz5pjr-yPC4/edit?usp=sharing">BoxNow Guide</a>.
+				</div>
+			  ]]>
+                </comment>
+                <field id="active" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="10" translate="label" type="select">
+                    <label>Enabled</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                </field>
+                <field id="title" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="20" translate="label" type="text">
+                    <label>Title</label>
+                    <frontend_model>Elegento\BoxNow\Block\Adminhtml\System\Config\Disable</frontend_model>
+                </field>
+                <field id="order_status" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="30" translate="label" type="select">
+                    <label>New Order Status</label>
+                    <source_model>Magento\Sales\Model\Config\Source\Order\Status\NewStatus</source_model>
+                </field>
+                <field id="allowspecific" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="40" translate="label" type="allowspecific">
+                    <label>Payment from Applicable Countries</label>
+                    <source_model>Magento\Payment\Model\Config\Source\Allspecificcountries</source_model>
+                </field>
+                <field id="specificcountry" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="50" translate="label" type="multiselect">
+                    <label>Payment from Applicable Countries</label>
+                    <source_model>Magento\Directory\Model\Config\Source\Country</source_model>
+                    <can_be_empty>1</can_be_empty>
+                </field>
+                <field id="sort_order" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="60" translate="label" type="text">
+                    <label>Sort Order</label>
+                </field>
+                <field id="instructions" showInDefault="1" showInStore="1" showInWebsite="1" sortOrder="70" translate="label" type="textarea">
+                    <label>Instructions</label>
+                </field>
+            </group>
+        </section>
+    </system>
+</config>
