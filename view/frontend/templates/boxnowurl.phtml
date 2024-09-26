@@ -1,0 +1,13 @@
+<?php
+/**
+ * @var $block BoxNowUrl
+ */
+
+use Elegento\BoxNow\Block\BoxNowUrl;
+
+?>
+<script>
+    window.boxNowIframeUrl = '<?php echo $block->getPartnerBoxNowUrl(); ?>';
+    window.amastyEnabled = '<?php echo $block->getAmastyConfigStatus(); ?>';
+</script>
+
